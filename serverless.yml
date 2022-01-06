@@ -1,0 +1,36 @@
+org: sirphemmiey
+app: dataminr-test
+service: dataminr-test
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  lambdaHashingVersion: '20201221'
+	
+functions:
+  api:
+    handler: src/app.handler
+    events:
+      - httpApi:
+          path: /{any+}
+          method: ANY
+    environment:
+      PORT: 3000
+      NODE_ENV: 'development'
+      MYSQL_DATABASE: 'dataminr'
+      MYSQL_HOSTNAME: 'mysql.playspread.com'
+      MYSQL_USER: 'oluwafemiakinde'
+      MYSQL_PASSWORD: 'Algorithm212...'
+
+  # healthcheck:
+  #   handler: src/app.healthcheck
+  #   description: Healthcheck to ensure the service is up
+  #   events:
+  #     - http:
+  #         path: healthcheck
+  #         method: get
+
+plugins:
+  - serverless-plugin-typescript
+  - serverless-offline
+  - serverless-express
