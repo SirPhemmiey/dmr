@@ -6,7 +6,17 @@
 - Yarn
 - Docker-compose
 
-### How to run locally?
+## How to run locally?
+
+- First create .env file in the root directory and put the following content in it
+
+```
+MYSQL_DATABASE=dataminr
+MYSQL_HOSTNAME=localhost
+MYSQL_USER=root
+MYSQL_PASSWORD=abc123
+```
+and then run the following commands sequentially
 
 ```sh
 yarn
@@ -34,16 +44,6 @@ yarn start
 - ORM was not used
 - API Versioning was used
 
-### ENV Content
-
-- Create .env file in the root directory and put the content in it
-
-```
-MYSQL_DATABASE=dataminr
-MYSQL_HOSTNAME=localhost
-MYSQL_USER=root
-MYSQL_PASSWORD=abc123
-```
 
 ### Things i would have done
 - Write more tests. Both unit and integration tests
