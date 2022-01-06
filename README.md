@@ -16,21 +16,21 @@ yarn start
 ```
 - [Here](https://documenter.getpostman.com/view/3683187/UVXdPK8c) is a simple postman documentation of the endpoints
 
-### Code Overview
+### Code Overview and things to know
 
 - [MySQL Docker Image](https://hub.docker.com/_/mysqls) was the choice of DB
-- I have used the[PBF Approach](https://phauer.com/2020/package-by-feature/) for structing the file
+- I have used the [PBF Approach](https://phauer.com/2020/package-by-feature/) for structing the project
 - I have used the [JSend](https://github.com/omniti-labs/jsend) specification in returning success and error messages in a consistent format
 - Abstraction was heavily used
 - There were two entities in this project hence two "services". Although they're more or less of the same descendant (requirement)
-- Typescript was used adopting an OOP paradigm
+- Typescript was used while adopting an OOP paradigm in the project
 - Some principles of SOLID were applied
 - Some Design patterns were used (Singleton, Facade, Repository amongst others)
 - `src/clients/mysql` contains the connection code and the schema
-- `src/services` contains the services and also the Daos (Data access object) which helps abstracts the complexity of services directly making database calls but instead an indirection 
+- `src/services` contains the services and also the Daos (Data access object) which helps abstracts the complexity of services directly making database calls but instead an indirection (Dependency Inversion)
 - Used prepared query to reduce the risk of SQL Injection
 - `src/routes/v1/tasklists/tasklists.test.ts` and `src/routes/v1/tasklists/tasklists.test.ts` have their tests in it. 
-- API was implemented as Lambda functions using Serverless framework
+- API was implemented as Lambda function using Serverless framework. See the `./serverless.yml` file
 - ORM was not used
 - API Versioning was used
 
