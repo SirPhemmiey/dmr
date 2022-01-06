@@ -12,7 +12,8 @@
     "dev": "yarn build && yarn run start",
     "nodemon": "nodemon src/server.ts",
     "start_ts": "ts-node src/server.ts",
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "test": "jest",
+    "delete-mysql": "docker-compose down -v"
   },
   "dependencies": {
     "@types/dotenv": "^8.2.0",

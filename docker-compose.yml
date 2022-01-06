@@ -1,7 +1,7 @@
 version: '3.1'
 
 services:
-  db:
+  mysql:
     image: mysql
     platform: linux/amd64 #i use M1
     #command: --default-authentication-plugin=mysql_native_password
