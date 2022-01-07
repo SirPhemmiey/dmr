@@ -36,6 +36,7 @@ yarn start
 - Typescript was used while adopting an OOP paradigm in the project
 - Some principles of SOLID were applied
 - Some Design patterns were used (Singleton, Facade, Repository amongst others)
+- `di-container.ts` file is the dependency injection container which analyzes a type's constructor and injects its dependencies into it, without the need of having to specify each constructor argument manually whenever or whereever they're to be used.
 - `src/clients/mysql` contains the connection code and the schema
 - `src/services` contains the services and also the Daos (Data access object) which helps abstracts the complexity of services directly making database calls but instead an indirection (Dependency Inversion)
 - Used prepared query to reduce the risk of SQL Injection
